@@ -1,0 +1,37 @@
+<section>
+    <h2>Your Review Matters!!</h2>
+
+    <form action="#" method="post">
+
+        <div>
+            <label for="reviewer-name">Your Name:</label><br>
+            <input type="text" id="reviewer-name" name="reviewer-name" required>
+        </div>
+
+        <div>
+            <label for="reviewer-email">Your Email:</label><br>
+            <input type="email" id="reviewer-email" name="reviewer-email" required>
+        </div>
+
+        <div>
+            <label for="review-subject">What are you reviewing?</label><br>
+            <select id="review-subject" name="review-subject" required>
+                <option value="">-- Select an Option --</option>
+                <option value="music">Music Composition</option>
+                <option value="performance">Live Performance</option>
+                <option value="sitar">Sitar Instrumental</option>
+                <option value="overall">Overall Experience</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="review-message">Your Review:</label><br>
+            <textarea id="review-message" name="review-message" rows="5" required></textarea>
+        </div>
+
+        <div>
+            <button type="submit">Submit Review</button>
+        </div>
+
+    </form>
+</section>
