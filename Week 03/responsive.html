@@ -13,22 +13,37 @@ body{
     margin:20px;
 }
 
-.gallery{
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+.flex-container{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
     gap:15px;
 }
 
-.card{
+.flex-item{
     background:#222;
     padding:40px;
     border-radius:8px;
     text-align:center;
+    font-size:20px;
+    flex:1 1 calc(33.33% - 15px);
     transition:0.3s;
 }
 
-.card:hover{
+.flex-item:hover{
     transform:scale(1.05);
+}
+
+@media (max-width: 900px){
+    .flex-item{
+        flex:1 1 calc(50% - 15px);
+    }
+}
+
+@media (max-width: 600px){
+    .flex-container{
+        flex-direction:column;
+    }
 }
 
 </style>
@@ -38,15 +53,15 @@ body{
 
 <h2>Prime Video</h2>
 
-<div class="gallery">
-<div class="card">Movie 1</div>
-<div class="card">Movie 2</div>
-<div class="card">Movie 3</div>
-<div class="card">Movie 4</div>
-<div class="card">Movie 5</div>
-<div class="card">Movie 6</div>
-<div class="card">Movie 7</div>
-<div class="card">Movie 8</div>
+<div class="flex-container">
+<div class="flex-item">Movie 1</div>
+<div class="flex-item">Movie 2</div>
+<div class="flex-item">Movie 3</div>
+<div class="flex-item">Movie 4</div>
+<div class="flex-item">Movie 5</div>
+<div class="flex-item">Movie 6</div>
+<div class="flex-item">Movie 7</div>
+<div class="flex-item">Movie 8</div>
 </div>
 
 </body>
